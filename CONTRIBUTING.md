@@ -3,8 +3,7 @@
 
 ## Public Participation Invited
 
-This OASIS TC Open Repository [cacao-json-schemas](https://github.com/oasis-open/cacao-json-schemas) is a community public repository that supports participation by anyone, whether affiliated with OASIS or not.  Substantive contributions (repository "code") and related feedback is invited from all parties, following the common conventions for participation in GitHub public repository projects.  Participation is expected to be consistent with the [OASIS TC Open Repository Guidelines and Procedures](https://www.oasis-open.org/policies-guidelines/open-repositories), the [LICENSE](https://www.oasis-open.org/sites/www.oasis-open.org/files/<license>) designated for this particular repository (Apache v2.0), and the requirement for an [Individual Contributor License Agreement](https://www.oasis-open.org/resources/open-repositories/cla/individual-cla). Please see the repository [README](https://github.com/oasis-open/cacao-json-schemas
-/blob/master/README.md) document for other details.
+This OASIS TC Open Repository [cacao-json-schemas](https://github.com/oasis-open/cacao-json-schemas) is a community public repository that supports participation by anyone, whether affiliated with OASIS or not.  Substantive contributions (repository "code") and related feedback is invited from all parties, following the common conventions for participation in GitHub public repository projects.  Participation is expected to be consistent with the [OASIS TC Open Repository Guidelines and Procedures](https://www.oasis-open.org/policies-guidelines/open-repositories), the [LICENSE](https://www.oasis-open.org/sites/www.oasis-open.org/files/<license>) designated for this particular repository (Apache v2.0), and the requirement for an [Individual Contributor License Agreement](https://www.oasis-open.org/resources/open-repositories/cla/individual-cla). Please see the repository [README](https://github.com/oasis-open/cacao-json-schemas/blob/master/README.md) document for other details.
 
 ## Governance Distinct from OASIS TC Process
 
@@ -30,5 +29,5 @@ OASIS TC Open Repositories use the familiar [fork-and-pull collaboration model](
 
 ## Feedback
 
-Questions or comments about this TC Open Repository's activities should be composed as GitHub issues or comments. If use of an issue/comment is not possible or appropriate, questions may be directed by email to the [Maintainers](https://github.com/oasis-open/<repo name>/blob/master/README.md#maintainers).  Please send general questions about TC Open Repository participation to OASIS Staff at mailto:repository-admin@oasis-open.org and any specific CLA-related questions to mailto:repository-cla@oasis-open.org.
+Questions or comments about this TC Open Repository's activities should be composed as GitHub issues or comments. If use of an issue/comment is not possible or appropriate, questions may be directed by email to the [Maintainers](https://github.com/oasis-open/cacao-json-schemas/blob/master/README.md#maintainers).  Please send general questions about TC Open Repository participation to OASIS Staff at mailto:repository-admin@oasis-open.org and any specific CLA-related questions to mailto:repository-cla@oasis-open.org.
 
