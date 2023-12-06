@@ -8,16 +8,10 @@ While this TC Open Repository remains associated with the sponsor TC, its develo
 
 All contributions made to this TC Open Repository are subject to open source license terms expressed in the [Apache License v2.0](https://github.com/oasis-open/cacao-json-schemas/blob/main/LICENSE). That license was selected as the declared [applicable license](https://www.oasis-open.org/resources/open-repositories/licenses) when the TC Open Repository was created.
 
-As documented in [CONTRIBUTING](https://github.com/oasis-open/cacao-json-schemas/blob/main/CONTRIBUTING.md) public-participation-invited, contributions to this OASIS TC Open Repository are invited from all parties, whether affiliated with OASIS or not. Participants must have a GitHub account, but no fees or OASIS membership obligations are required. Participation is expected to be consistent with the [OASIS TC Open Repository Guidelines and Procedures](https://www.oasis-open.org/policies-guidelines/open-repositories), the open source [LICENSE](https://github.com/oasis-open/cacao-json-schemas
-/blob/master/LICENSE) designated for this particular repository, and the requirement for an [Individual Contributor License Agreement](https://www.oasis-open.org/resources/open-repositories/cla/individual-cla) that governs intellectual property.
+As documented in [CONTRIBUTING](https://github.com/oasis-open/cacao-json-schemas/blob/main/CONTRIBUTING.md) public-participation-invited, contributions to this OASIS TC Open Repository are invited from all parties, whether affiliated with OASIS or not. Participants must have a GitHub account, but no fees or OASIS membership obligations are required. Participation is expected to be consistent with the [OASIS TC Open Repository Guidelines and Procedures](https://www.oasis-open.org/policies-guidelines/open-repositories), the open source [LICENSE](https://github.com/oasis-open/cacao-json-schemas/blob/main/LICENSE) designated for this particular repository, and the requirement for an [Individual Contributor License Agreement](https://www.oasis-open.org/resources/open-repositories/cla/individual-cla) that governs intellectual property.
 
 ## Statement of Purpose
-
-<statement of purpose provided by the TC>
-
-*Additions to Statement of Purpose*
-
-*The TC may include additional content as descriptive text, reflecting project status, milestones, releases, modifications to statement of purpose, etc. 
+JSON validation schemas for CACAO Playbooks
 
 ## <a id="maintainers">Maintainers</a>
 
