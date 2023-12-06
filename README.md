@@ -4,7 +4,7 @@
 
 This GitHub public repository [cacao-json-schemas](https://github.com/oasis-open/cacao-json-schemas/) was created at the request of the [CACAO](https://www.oasis-open.org/committees/cacao/) as an [OASIS TC Open Repository](https://www.oasis-open.org/resources/open-repositories/) to support development of open source resources related to Technical Committee work.
 
-While this TC Open Repository remains associated with the sponsor TC, its development priorities, leadership, intellectual property terms, participation rules, and other matters of governance are [separate and distinct](https://github.com/oasis-open/cacao-json-schemas/blob/master/CONTRIBUTING.md) governance-distinct-from-oasis-tc-process) from the OASIS TC Process and related policies.
+While this TC Open Repository remains associated with the sponsor TC, its development priorities, leadership, intellectual property terms, participation rules, and other matters of governance are [separate and distinct](https://github.com/oasis-open/cacao-json-schemas/blob/master/CONTRIBUTING.md) from the OASIS TC Process and related policies.
 
 All contributions made to this TC Open Repository are subject to open source license terms expressed in the [Apache License v2.0](https://github.com/oasis-open/cacao-json-schemas/blob/main/LICENSE). That license was selected as the declared [applicable license](https://www.oasis-open.org/resources/open-repositories/licenses) when the TC Open Repository was created.
 
