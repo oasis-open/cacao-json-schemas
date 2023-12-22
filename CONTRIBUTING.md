@@ -1,5 +1,4 @@
-# Contributing</h1>
-
+# Contributing
 
 ## Public Participation Invited
 
