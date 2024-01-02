@@ -11,7 +11,7 @@ All contributions made to this TC Open Repository are subject to open source lic
 As documented in [CONTRIBUTING](https://github.com/oasis-open/cacao-json-schemas/blob/main/CONTRIBUTING.md) public-participation-invited, contributions to this OASIS TC Open Repository are invited from all parties, whether affiliated with OASIS or not. Participants must have a GitHub account, but no fees or OASIS membership obligations are required. Participation is expected to be consistent with the [OASIS TC Open Repository Guidelines and Procedures](https://www.oasis-open.org/policies-guidelines/open-repositories), the open source [LICENSE](https://github.com/oasis-open/cacao-json-schemas/blob/main/LICENSE) designated for this particular repository, and the requirement for an [Individual Contributor License Agreement](https://www.oasis-open.org/resources/open-repositories/cla/individual-cla) that governs intellectual property.
 
 ## Statement of Purpose
-JSON validation schemas for CACAO Playbooks
+JSON validation schemas for [CACAO Security Playbooks Version 2.0](https://docs.oasis-open.org/cacao/security-playbooks/v2.0/security-playbooks-v2.0.html)
 
 ## <a id="maintainers">Maintainers</a>
 
