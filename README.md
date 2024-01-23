@@ -29,7 +29,7 @@ Initially, the TC members have designated one or more persons to serve as Mainta
 
 - [TC Open Repositories: Overview and Resources](https://www.oasis-open.org/resources/open-repositories/)
 
-- [Frequently Asked Questions](https://www.oasis-open.org/resources/open-repositories/faq)
+- [Frequently Asked Questions](https://www.oasis-open.org/faq-tc-repo/)
 
 - [Open Source Licenses](https://www.oasis-open.org/resources/open-repositories/licenses)
 
