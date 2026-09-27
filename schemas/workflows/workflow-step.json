@@ -1,6 +1,6 @@
 {
   "$id": "https://raw.githubusercontent.com/oasis-open/cacao-json-schemas/main/schemas/workflows/workflow-step.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "workflow-step",
   "description": "Workflows contain a series of steps that are stored in a dictionary (see the workflow property in section 3.1), where the key is the step ID and the value is a workflow step. These workflow steps along with the associated commands form the building blocks for playbooks and are used to control the commands that need to be executed. Workflows steps are processed either sequentially, in parallel, or both depending on the type of steps required by the playbook. In addition to simple processing, workflow steps MAY also contain conditional and/or temporal operations to control the execution of the playbook. \n\nConditional processing means executing steps or commands after some sort of condition is met. Temporal processing means executing steps or commands either during a certain time window or after some period of time has passed. \n\nThis section defines the various workflow steps and how they may be used to define a playbook. \n\nEach workflow step contains base properties that are common across all steps. These common properties are defined in the following table. The determination of a step being successful,failing, or completing is implementation specific and is out of scope for this specification, but details MAY be included in the description property.",
   "type": "object",
@@ -75,33 +75,56 @@
   "required": ["type"],
   "anyOf": [
     {
-      "if": {
-        "properties": {
-          "type": { "const": "end" }
+      "properties": {
+        "type": { "const": "end" }
+      },
+      "not": {
+        "anyOf": [
+          { "required": ["on_completion"] },
+          { "required": ["on_failure"] },
+          { "required": ["on_success"] }
+        ]
+      }
+    },
+    {
+      "properties": {
+        "type": {
+          "$ref": "#/$defs/workflow-step-type-enum-not-start-or-end"
         }
       },
-      "then": {
-        "not": {
-          "required": ["on_completion", "on_failure", "on_success"]
+      "anyOf": [
+        {
+          "required": ["on_completion"],
+          "not": {
+            "anyOf": [
+              { "required": ["on_failure"] },
+              { "required": ["on_success"] }
+            ]
+          }
+        },
+        {
+          "required": ["on_success"],
+          "not": {
+            "required": ["on_completion"]
+          }
         }
-      }
+      ]
     },
     {
       "required": ["on_completion"],
+      "properties": {
+        "type": { "const": "start" }
+      },
       "not": {
-        "required": ["on_failure", "on_success"]
-      }
-    },
-    {
-      "required": ["on_success"],
-      "not": {
-        "required": ["on_completion"]
+        "anyOf": [
+          { "required": ["on_failure"] },
+          { "required": ["on_success"] }
+        ]
       }
     }
   ],  
   "$defs": {
     "workflow-step-type-enum": {
-      "type": "string",
       "enum": [
         "start",
         "end",
@@ -111,6 +134,17 @@
         "if-condition",
         "while-condition",
         "switch-condition"
+      ]
+    },
+    "workflow-step-type-enum-not-start-or-end": {
+      "description": "The subset of workflow-step-type-enum excluding 'start' and 'end', used to scope the on_completion/on_success/on_failure exclusivity rules below to steps other than start/end (which have their own, separate rules).",
+      "enum": [
+        "action",
+        "if-condition",
+        "parallel",
+        "playbook-action",
+        "switch-condition",
+        "while-condition"
       ]
     }
   }

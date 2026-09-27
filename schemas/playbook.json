@@ -1,19 +1,17 @@
 {
   "$id": "https://raw.githubusercontent.com/oasis-open/cacao-json-schemas/main/schemas/playbook.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "playbook",
   "description": "CACAO playbooks are made up of six parts playbook metadata, the workflow logic, a list of object definitions used in the workflow logic (agents and targets), a list of extensions, a list of data markings, and a list of any digital signatures. Playbooks MAY refer to other playbooks in the workflow, similar to how programs refer to function calls or modules that comprise the program. The definition and normative requirements for all data types listed in the property table below and other property tables in this document can be found in Section 10.",
   "type": "object",
   "properties": {
     "type": {
-      "type": "string",
       "description": "The value of this property MUST be 'playbook'.",
-      "enum": ["playbook"]
+      "const": "playbook"
     },
     "spec_version": {
-      "type": "string",
       "description": "The version of the specification used to represent this playbook. The value of this property MUST be 'cacao-2.0' to represent the version of this specification.",
-      "enum": ["cacao-2.0"]
+      "const": "cacao-2.0"
     },
     "id": {
       "$ref": "data-types/identifier.json",
@@ -247,6 +245,9 @@
         },
         "^ssh--[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$": {
           "$ref": "agent-target/ssh.json"
+        },
+        "^[a-z][a-z0-9-]+[a-z0-9]--[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$": {
+          "$ref": "agent-target/agent-target.json"
         }
       },
       "description": "A dictionary of agents that can be referenced from workflow steps found in the workflow property. \n\nThe key for each entry in the dictionary MUST be an 'identifier' that uniquely identifies the agent (see section 10.10 for more information on identifiers). The value for each key MUST be a CACAO 'agent-target' object (see section 7). \n\nAny agents that are used in other parts of this playbook MUST also be included in this property."
@@ -285,6 +286,9 @@
         },
         "^ssh--[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$": {
           "$ref": "agent-target/ssh.json"
+        },
+        "^[a-z][a-z0-9-]+[a-z0-9]--[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$": {
+          "$ref": "agent-target/agent-target.json"
         }
       },
       "description": "A dictionary of targets that can be referenced from workflow steps found in the workflow property. \n\nThe key for each entry in the dictionary MUST be an 'identifier' that uniquely identifies the target (see section 10.10 for more information on identifiers). The value for each key MUST be a CACAO 'agent-target' object (see section 7). \n\nAny targets that are used in other parts of this playbook MUST also be included in this property."
@@ -343,7 +347,6 @@
           "type": "string"
         },
         {
-          "type": "string",
           "enum": [
             "attack",
             "detection",
@@ -363,7 +366,6 @@
           "type": "string"
         },
         {
-          "type": "string",
           "enum": [
             "compose-content",
             "deliver-content",
@@ -397,7 +399,6 @@
           "type": "string"
         },
         {
-          "type": "string",
           "enum": [
             "aerospace",
             "aviation",

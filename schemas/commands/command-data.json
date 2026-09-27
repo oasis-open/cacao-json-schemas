@@ -1,6 +1,6 @@
 {
   "$id": "https://raw.githubusercontent.com/oasis-open/cacao-json-schemas/main/schemas/commands/command-data.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "command-data",
   "description": "The CACAO command object ('command-data') contains detailed information about the commands that are to be executed automatically or manually as part of an action step (see section 4.5). Each command listed in an action step may be of a different command type, however, all commands listed in a single step MUST be processed or executed by all of the agents defined in that step. \n\nCommands can make use of variables just like other parts of the playbook. \n\nEach command object contains base properties that are common across all commands. These common properties are defined in the following table.",
   "type": "object",
@@ -36,7 +36,6 @@
   "required": [
     "type"
   ],
-  "unevaluatedProperties": false,
   "$defs": {
     "command-type-ov": {
       "anyOf": [
@@ -44,7 +43,6 @@
           "type": "string"
         },
         {
-          "type": "string",
           "enum": [
             "manual",
             "bash",
@@ -68,7 +66,6 @@
           "type": "string"
         },
         {
-          "type": "string",
           "enum": [
             "compose-content",
             "deliver-content",

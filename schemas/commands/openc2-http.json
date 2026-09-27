@@ -1,6 +1,6 @@
 {
   "$id": "https://raw.githubusercontent.com/oasis-open/cacao-json-schemas/main/schemas/commands/openc2-http.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "openc2-http",
   "description": "The openc2 command represents a command that is intended to be processed via an openc2 processor via an HTTP agent/target. In addition to the inherited properties, this section defines the following additional properties that are valid for this type.",
   "type": "object",
@@ -11,9 +11,8 @@
     {
       "properties": {
         "type": {
-          "type": "string",
           "description": "The value of this property MUST be 'openc2-http'.",
-          "enum": ["openc2-http"]
+          "const": "openc2-http"
         },
         "command": {
           "type": "string",

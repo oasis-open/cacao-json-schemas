@@ -1,0 +1,57 @@
+{
+  "$id": "https://raw.githubusercontent.com/oasis-open/cacao-json-schemas/main/schemas/data-types/network-address.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "network-address",
+  "description": "The 'network-address' data type captures one or more network addresses for an agent or target and uses the JSON object type [RFC8259] for serialization. Each property is optional, but at least one MUST be present. The key for each property identifies the address type; the value is a list of addresses of that type.",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "minProperties": 1,
+  "properties": {
+    "dname": {
+      "type": "array",
+      "description": "One or more domain names.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ipv4": {
+      "type": "array",
+      "description": "One or more IPv4 addresses.",
+      "items": {
+        "type": "string",
+        "pattern": "^(\\b25[0-5]|\\b2[0-4][0-9]|\\b[01]?[0-9][0-9]?)(\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$"
+      }
+    },
+    "ipv6": {
+      "type": "array",
+      "description": "One or more IPv6 addresses.",
+      "items": {
+        "type": "string",
+        "pattern": "^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$"
+      }
+    },
+    "l2mac": {
+      "type": "array",
+      "description": "One or more layer 2 MAC addresses.",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-fA-F0-9]{2}(:[a-fA-F0-9]{2}){5}$"
+      }
+    },
+    "url": {
+      "type": "array",
+      "description": "One or more URLs.",
+      "items": {
+        "type": "string",
+        "pattern": "^(https?://)?(www\\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_+.~#?&//=]*)$"
+      }
+    },
+    "vlan": {
+      "type": "array",
+      "description": "One or more VLAN identifiers.",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

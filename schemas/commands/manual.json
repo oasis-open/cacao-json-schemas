@@ -1,6 +1,6 @@
 {
   "$id": "https://raw.githubusercontent.com/oasis-open/cacao-json-schemas/main/schemas/commands/manual.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "manual",
   "description": "The manual command represents a command that is intended to be processed by a human or a system that acts on behalf of a human. In addition to the inherited properties, this section defines the following additional properties that are valid for this type. Either the 'command' property or the 'command_b64' property MUST be present.",
   "type": "object",
@@ -11,11 +11,8 @@
     {
       "properties": {
         "type": {
-          "type": "string",
           "description": "The value of this property MUST be 'manual'.",
-          "enum": [
-            "manual"
-          ]
+          "const": "manual"
         },
         "command": {
           "type": "string",
@@ -27,6 +24,14 @@
           "description": "A complex command that can not be encoded as a simple string and thus MUST be base64 encoded (see section 4 of [RFC 4648]). \n\nThe value of this property if present MUST be a valid manual command."
         }
       }
+    }
+  ],
+  "anyOf": [
+    {
+      "required": ["command"]
+    },
+    {
+      "required": ["command_b64"]
     }
   ],
   "unevaluatedProperties": false

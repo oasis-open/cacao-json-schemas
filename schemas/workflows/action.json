@@ -1,8 +1,9 @@
 {
   "$id": "https://raw.githubusercontent.com/oasis-open/cacao-json-schemas/main/schemas/workflows/action.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "action",
   "description": "The action step workflow step contains the actual commands to be executed by an agent against a set of targets. These commands are intended to be processed sequentially. In addition to the inherited properties, this section defines five more specific properties that are valid for this type.",
+  "type": "object",
   "allOf": [
     {
       "$ref": "workflow-step.json"
@@ -10,17 +11,80 @@
     {
       "properties": {
         "type": {
-          "type": "string",
           "description": "The value of this property MUST be 'action'.",
-          "enum": [
-            "action"
-          ]
+          "const": "action"
         },
         "commands": {
           "type": "array",
           "description": "A list of commands that are to be executed as part of this step. If more than one command is listed, the commands MUST be processed in the order in which they are listed (see section 5). All commands in a given step MUST be applicable to all the agents and all the targets defined in that step.",
           "items": {
-            "$ref": "../commands/command-data.json"
+            "oneOf": [
+              {
+                "$ref": "../commands/manual.json"
+              },
+              {
+                "$ref": "../commands/bash.json"
+              },
+              {
+                "$ref": "../commands/caldera-cmd.json"
+              },
+              {
+                "$ref": "../commands/elastic.json"
+              },
+              {
+                "$ref": "../commands/http-api.json"
+              },
+              {
+                "$ref": "../commands/jupyter.json"
+              },
+              {
+                "$ref": "../commands/kestrel.json"
+              },
+              {
+                "$ref": "../commands/openc2-http.json"
+              },
+              {
+                "$ref": "../commands/powershell.json"
+              },
+              {
+                "$ref": "../commands/sigma.json"
+              },
+              {
+                "$ref": "../commands/ssh.json"
+              },
+              {
+                "$ref": "../commands/yara.json"
+              },
+              {
+                "allOf": [
+                  {
+                    "$ref": "../commands/command-data.json"
+                  },
+                  {
+                    "properties": {
+                      "type": {
+                        "not": {
+                          "enum": [
+                            "manual",
+                            "bash",
+                            "caldera-cmd",
+                            "elastic",
+                            "http-api",
+                            "jupyter",
+                            "kestrel",
+                            "openc2-http",
+                            "powershell",
+                            "sigma",
+                            "ssh",
+                            "yara"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
           },
           "minItems": 1
         },

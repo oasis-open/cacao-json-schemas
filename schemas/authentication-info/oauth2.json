@@ -1,8 +1,9 @@
 {
   "$id": "https://raw.githubusercontent.com/oasis-open/cacao-json-schemas/main/schemas/authentication-info/oauth2.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "oauth2",
   "description": "This type defines the Oauth2 authentication information object and is used by agents and targets when performing oauth2 authentication. This object inherits all of the authentication information common properties (see section 6.1). In addition to the inherited properties, this section defines the following additional properties that are valid for this type. If the 'kms' and 'kms_key_identifier' properties are used the 'token' property MUST NOT be populated.",
+  "type": "object",
   "allOf": [
     {
       "$ref": "authentication-info.json"
@@ -10,11 +11,8 @@
     {
       "properties": {
         "type": {
-          "type": "string",
           "description": "The value of this property MUST be 'oauth2'.",
-          "enum": [
-            "oauth2"
-          ]
+          "const": "oauth2"
         },
         "oauth_header": {
           "type": "string",

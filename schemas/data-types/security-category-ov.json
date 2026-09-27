@@ -1,0 +1,46 @@
+{
+  "$id": "https://raw.githubusercontent.com/oasis-open/cacao-json-schemas/main/schemas/data-types/security-category-ov.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "security-category-ov",
+  "description": "The security-category-ov vocabulary identifies categories of security infrastructure types that an agent or target may represent (see section 7.11.1). This is an open vocabulary: the value SHOULD come from the fixed enumeration below, but producers MAY use another string value not listed here.",
+  "$defs": {
+    "security-category-ov": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "enum": [
+            "aaa",
+            "analytics",
+            "caldera",
+            "content-gateway",
+            "desktop",
+            "endpoint",
+            "firewall",
+            "handset",
+            "ids",
+            "ips",
+            "kali",
+            "manx",
+            "orchestrator",
+            "os-linux",
+            "os-mac",
+            "os-windows",
+            "redcanary-atomicred",
+            "ragdoll",
+            "router",
+            "sandcat",
+            "server",
+            "siem",
+            "switch",
+            "ticketing",
+            "tip",
+            "wireless"
+          ]
+        }
+      ]
+    }
+  }
+}
+

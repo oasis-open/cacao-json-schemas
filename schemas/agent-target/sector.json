@@ -1,6 +1,6 @@
 {
   "$id": "https://raw.githubusercontent.com/oasis-open/cacao-json-schemas/main/schemas/agent-target/sector.json",
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "sector",
   "description": "This type defines a sector object and is used for commands that need to be processed or executed by a sector. This object inherits the common agent properties. In addition to the inherited properties, this section defines the following additional property that is valid for this type.",
   "type": "object",
@@ -11,11 +11,8 @@
     {
       "properties": {
         "type": {
-          "type": "string",
           "description": "The value of this property MUST be 'sector'.",
-          "enum": [
-            "sector"
-          ]
+          "const": "sector"
         },
         "sector": {
           "$ref": "#/$defs/industry-sector-ov",
@@ -35,7 +32,6 @@
           "type": "string"
         },
         {
-          "type": "string",
           "enum": [
             "aerospace",
             "aviation",
